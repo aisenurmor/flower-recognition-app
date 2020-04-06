@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gDO-H3-DeK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Which Flower?-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DetailViewController" customModule="WhichFlower" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="not-found-flower" translatesAutoresizingMaskIntoConstraints="NO" id="Slu-6P-fCz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="384"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Slu-6P-fCz" secondAttribute="height" multiplier="69:64" id="qDl-y7-8to"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ioh-7K-afz">
+                                <rect key="frame" x="0.0" y="502" width="414" height="345"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Slu-6P-fCz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0lp-pw-OBm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ioh-7K-afz" secondAttribute="bottom" constant="15" id="5lS-AN-DAl"/>
+                            <constraint firstItem="Slu-6P-fCz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SFE-AZ-ZPR"/>
+                            <constraint firstItem="Ioh-7K-afz" firstAttribute="leading" secondItem="Slu-6P-fCz" secondAttribute="leading" id="dqX-D2-fKj"/>
+                            <constraint firstItem="Slu-6P-fCz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dsT-jM-oqk"/>
+                            <constraint firstItem="Ioh-7K-afz" firstAttribute="top" secondItem="Slu-6P-fCz" secondAttribute="bottom" constant="30" identifier="descriptionConst" id="oB1-sC-S2V"/>
+                            <constraint firstItem="Ioh-7K-afz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="x9O-8U-ZHk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Which Flower?" id="x9J-nZ-SwR"/>
+                    <connections>
+                        <outlet property="descriptionText" destination="Ioh-7K-afz" id="UMo-mq-rFC"/>
+                        <outlet property="imageView" destination="Slu-6P-fCz" id="EJg-PK-GiA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2079.7101449275365" y="137.94642857142856"/>
+        </scene>
+        <!--Which Flower?-->
+        <scene sceneID="VCB-X1-edT">
+            <objects>
+                <tableViewController id="VIb-Tj-xd1" customClass="TableViewController" customModule="WhichFlower" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yjO-h2-cfi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="gN9-Kc-wMZ" detailTextLabel="oMF-Q4-LFS" style="IBUITableViewCellStyleSubtitle" id="dhb-gR-MT7" customClass="SwipeTableViewCell" customModule="SwipeCellKit">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dhb-gR-MT7" id="EEv-1J-Ij0">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gN9-Kc-wMZ">
+                                            <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oMF-Q4-LFS">
+                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VIb-Tj-xd1" id="DrJ-Wp-dQA"/>
+                            <outlet property="delegate" destination="VIb-Tj-xd1" id="8xi-hG-LcX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Which Flower?" id="Hpk-GP-mrH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="cjB-Wc-HsP">
+                            <color key="tintColor" red="0.60149792680000003" green="0.60900738050000003" blue="0.74107821009999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="cameraTapped:" destination="VIb-Tj-xd1" id="DSP-e1-gT8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="notFoundView" destination="qN5-mW-Mdm" id="mrD-Wq-51n"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToDetail" id="k8G-7y-Uvu"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VVe-AT-9z8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="qN5-mW-Mdm">
+                    <rect key="frame" x="0.0" y="0.0" width="298" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="not-found-flower" translatesAutoresizingMaskIntoConstraints="NO" id="bcl-rU-fZS">
+                            <rect key="frame" x="0.0" y="20" width="298" height="108"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="bcl-rU-fZS" firstAttribute="trailing" secondItem="eos-ah-jrM" secondAttribute="trailing" id="HDa-Y2-mpG"/>
+                        <constraint firstItem="bcl-rU-fZS" firstAttribute="top" secondItem="qN5-mW-Mdm" secondAttribute="top" constant="20" symbolic="YES" id="LIZ-BS-lTE"/>
+                        <constraint firstItem="bcl-rU-fZS" firstAttribute="leading" secondItem="eos-ah-jrM" secondAttribute="leading" id="P2A-wy-nca"/>
+                        <constraint firstItem="eos-ah-jrM" firstAttribute="bottom" secondItem="bcl-rU-fZS" secondAttribute="bottom" constant="1.1368683772161603e-13" id="Y04-3a-9Zt"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="eos-ah-jrM"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="1332" y="138"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fl9-1u-YyE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gDO-H3-DeK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pPY-Aw-ag6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VIb-Tj-xd1" kind="relationship" relationship="rootViewController" id="fFW-Nt-0xX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kue-Lw-eAb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400.00000000000006" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="not-found-flower" width="470" height="394"/>
+    </resources>
+</document>
